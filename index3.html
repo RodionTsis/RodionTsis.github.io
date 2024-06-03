@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">Помним Билли Херрингтона</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        .dark-theme {
+            background-color: #343a40;
+            color: #f8f9fa;
+        }
+        header {
+            background-color: #343a40;
+            color: #f8f9fa;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #495057;
+            padding: 0.5em 0;
+            margin-bottom: 1em;
+        }
+        nav button {
+            background: none;
+            border: none;
+            color: #f8f9fa;
+            padding: 1em;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        nav button:hover {
+            background-color: #6c757d;
+        }
+        .content {
+            display: none;
+            padding: 2em;
+        }
+        .content.active {
+            display: block;
+        }
+        footer {
+            background-color: #343a40;
+            color: #f8f9fa;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .language-menu {
+            display: none;
+            text-align: center;
+            padding: 1em;
+        }
+        .language-menu button {
+            background: none;
+            border: 1px solid #343a40;
+            color: #343a40;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .language-menu button:hover {
+            background-color: #343a40;
+            color: #f8f9fa;
+        }
+        .dark-theme .language-menu button {
+            border-color: #f8f9fa;
+            color: #f8f9fa;
+        }
+        .dark-theme .language-menu button:hover {
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 data-translate="title">Помним Билли Херрингтона</h1>
+    </header>
+    <nav>
+        <button onclick="showSection('home')" data-translate="home">На главную</button>
+        <button onclick="showSection('interesting')" data-translate="interesting">Интересное</button>
+        <button onclick="showSection('about')" data-translate="about">О нас</button>
+        <button onclick="toggleTheme()" data-translate="toggleTheme">Сменить тему</button>
+        <button onclick="toggleLanguageMenu()" data-translate="language">Язык</button>
+    </nav>
+    <div class="language-menu" id="language-menu">
+        <button onclick="toggleLanguage('ru')">Русский</button>
+        <button onclick="toggleLanguage('en')">English</button>
+        <button onclick="toggleLanguage('ja')">日本語</button>
+    </div>
+    <div class="content active" id="home-content">
+        <h2 data-translate="welcome">Добро пожаловать на наш сайт!</h2>
+        <p data-translate="dedication">Этот сайт посвящен памяти Билли Херрингтона, также известного как "Аники Билли". Мы расскажем о его жизни, карьере и влиянии на интернет-культуру.</p>
+        <h3 data-translate="introduction">Введение</h3>
+        <p data-translate="bio">Билли Херрингтон, также известный как "Аники Билли", стал легендой интернета, несмотря на его карьеру в индустрии взрослых фильмов. Он родился 14 июля 1969 года в Норт-Белмор, Нью-Йорк, и трагически погиб в автокатастрофе 2 марта 2018 года. Однако его наследие продолжает жить благодаря интернет-культуре.</p>
+        <h3 data-translate="career">Карьера</h3>
+        <p data-translate="careerDetails">Билли начал свою карьеру как модель, затем перешел в индустрию взрослых фильмов, где быстро стал популярным. Однако настоящая слава пришла к нему неожиданным образом.</p>
+        <h3 data-translate="internetFame">Интернет-Слава</h3>
+        <p data-translate="internetFameDetails">Все началось с японского видеохостинга "Никонико Дуга". В 2007 году пользователь с ником "Гачимучи" загрузил монтажные сцены из фильмов Билли Херрингтона с добавлением юмористических комментариев и музыки. Эти видео быстро стали вирусными, породив множество пародий и мемов.</p>
+        <p data-translate="nickname">Прозвище "Аники" (японское слово, означающее "старший брат") закрепилось за Билли, и он стал культовой фигурой в интернете. Его харизма, физическая форма и чувство юмора сделали его иконой для многих интернет-пользователей.</p>
+        <h3 data-translate="conclusion">Заключение</h3>
+        <p data-translate="legacy">Билли Херрингтон оставил значительный след в интернет-культуре. Его жизнь и карьера вышли за пределы индустрии взрослых фильмов. Он стал символом силы, юмора и харизмы, и его наследие продолжает жить в сердцах миллионов фанатов по всему миру.</p>
+        <p data-translate="memorial">Несмотря на его трагическую смерть, Билли Херрингтон будет вечно помнить как икона мемов и вдохновение для многих людей. Его имя останется в истории интернета, и его образы и фразы будут продолжать радовать интернет-пользователей на протяжении многих лет.</p>
+    </div>
+    <div class="content" id="interesting-content">
+        <h2 data-translate="interestingFacts">Интересные Факты</h2>
+        <p><strong data-translate="fitnessFan">Фитнес-Фанат:</strong> <span data-translate="fitnessDetails">Билли был известен своей великолепной физической формой. Он много времени посвящал тренировкам и был вдохновением для многих бодибилдеров.</span></p>
+        <p><strong data-translate="musicTaste">Музыкальный Вкус:</strong> <span data-translate="musicDetails">Вирусные видео с его участием часто сопровождались песнями вроде "Hot Stuff" Донны Саммер и "Right Here, Right Now" Фэтбой Слима.</span></p>
+        <p><strong data-translate="culturalPhenomenon">Культурный Феномен:</strong> <span data-translate="culturalDetails">В Японии, где он приобрел наибольшую популярность, фанаты называли его "Гачианики", и его образы использовались в многочисленных интернет-мемах и флэшмобах.</span></p>
+        <p><strong data-translate="globalInfluence">Мировое Влияние:</strong> <span data-translate="globalDetails">Билли Херрингтон и мемы с его участием стали популярными не только в Японии, но и в других странах, благодаря таким платформам как YouTube и Reddit.</span></p>
+        <h2 data-translate="jokesMemes">Шутки и Мемы</h2>
+        <p data-translate="jokesMemesIntro">Шутки и мемы с Билли Херрингтоном часто связаны с его харизматичными и мощными высказываниями. Вот несколько примеров:</p>
+        <p><strong data-translate="sunsOut">"Suns out, guns out!"</strong> - <span data-translate="sunsOutDetails">Эта фраза часто ассоциируется с Билли и его увлечением бодибилдингом.</span></p>
+        <p><strong data-translate="gachiMuchis">"Gachi-muchis everywhere!"</strong> - <span data-translate="gachiDetails">Приветствие фанатов, особенно в контексте мемов.</span></p>
+        <p><strong data-translate="welcomeGym">"Welcome to the gym!"</strong> - <span data-translate="welcomeDetails">Используется в многочисленных пародийных видео, как будто Билли приветствует новых поклонников в своем мире.</span></p>
+    </div>
+    <div class="content" id="about-content">
+        <h2 data-translate="aboutUs">О нас</h2>
+        <p data-translate="aboutProject">Этот проект был создан в память о Билли Херрингтоне учениками 9 класса. Наша цель - сохранить его наследие и рассказать о его влиянии на интернет-культуру и множество людей по всему миру. Мы надеемся, что наш проект поможет людям больше узнать о Билли Херрингтоне и его значимости в истории мемов и интернет-феноменов.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Помним Билли Херрингтона. Все права защищены.</p>
+    </footer>
+    <script>
+        const translations = {
+            en: {
+                title: "Remembering Billy Herrington",
+                home: "Home",
+                interesting: "Interesting",
+                about: "About Us",
+                toggleTheme: "Toggle Theme",
+                language: "Language",
+                welcome: "Welcome to our website!",
+                dedication: "This site is dedicated to the memory of Billy Herrington, also known as 'Aniki Billy'. We will tell you about his life, career, and influence on internet culture.",
+                introduction: "Introduction",
+                bio: "Billy Herrington, also known as 'Aniki Billy', became an internet legend despite his career in the adult film industry. He was born on July 14, 1969, in North Bellmore, New York, and tragically died in a car accident on March 2, 2018. However, his legacy continues to live on thanks to internet culture.",
+                career: "Career",
+                careerDetails: "Billy started his career as a model, then moved to the adult film industry, where he quickly became popular. However, real fame came to him unexpectedly.",
+                internetFame: "Internet Fame",
+                internetFameDetails: "It all started with the Japanese video hosting 'Niconico Douga'. In 2007, a user with the nickname 'Gachimuchi' uploaded montage scenes from Billy Herrington's films with humorous comments and music. These videos quickly went viral, spawning many parodies and memes.",
+                nickname: "The nickname 'Aniki' (the Japanese word for 'big brother') stuck with Billy, and he became a cult figure on the internet. His charisma, physical form, and sense of humor made him an icon for many internet users.",
+                conclusion: "Conclusion",
+                legacy: "Billy Herrington left a significant mark on internet culture. His life and career went beyond the adult film industry. He became a symbol of strength, humor, and charisma, and his legacy continues to live in the hearts of millions of fans around the world.",
+                memorial: "Despite his tragic death, Billy Herrington will always be remembered as a meme icon and inspiration for many people. His name will remain in internet history, and his images and phrases will continue to delight internet users for many years to come.",
+                interestingFacts: "Interesting Facts",
+                fitnessFan: "Fitness Fan:",
+                fitnessDetails: "Billy was known for his excellent physical shape. He devoted a lot of time to training and was an inspiration for many bodybuilders.",
+                musicTaste: "Musical Taste:",
+                musicDetails: "Viral videos featuring him were often accompanied by songs like Donna Summer's 'Hot Stuff' and Fatboy Slim's 'Right Here, Right Now'.",
+                culturalPhenomenon: "Cultural Phenomenon:",
+                culturalDetails: "In Japan, where he gained the most popularity, fans called him 'Gachianiki', and his images were used in numerous internet memes and flash mobs.",
+                globalInfluence: "Global Influence:",
+                globalDetails: "Billy Herrington and memes featuring him became popular not only in Japan but also in other countries, thanks to platforms like YouTube and Reddit.",
+                jokesMemes: "Jokes and Memes",
+                jokesMemesIntro: "Jokes and memes with Billy Herrington are often associated with his charismatic and powerful statements. Here are a few examples:",
+                sunsOut: "Suns out, guns out!",
+                sunsOutDetails: "This phrase is often associated with Billy and his passion for bodybuilding.",
+                gachiMuchis: "Gachi-muchis everywhere!",
+                gachiDetails: "A greeting of fans, especially in the context of memes.",
+                welcomeGym: "Welcome to the gym!",
+                welcomeDetails: "Used in numerous parody videos, as if Billy is welcoming new fans into his world.",
+                aboutUs: "About Us",
+                aboutProject: "This project was created in memory of Billy Herrington by 9th-grade students. Our goal is to preserve his legacy and tell about his influence on internet culture and many people around the world. We hope that our project will help people learn more about Billy Herrington and his significance in the history of memes and internet phenomena."
+            },
+            ja: {
+                title: "ビリー・ヘリントンを覚えている",
+                home: "ホーム",
+                interesting: "面白い",
+                about: "私たちについて",
+                toggleTheme: "テーマの切り替え",
+                language: "言語",
+                welcome: "私たちのウェブサイトへようこそ！",
+                dedication: "このサイトは「兄貴ビリー」として知られるビリー・ヘリントンの記憶に捧げられています。私たちは彼の人生、キャリア、そしてインターネット文化への影響についてお話しします。",
+                introduction: "導入",
+                bio: "ビリー・ヘリントン、通称「兄貴ビリー」は、アダルト映画業界でのキャリアにもかかわらず、インターネットの伝説となりました。彼は1969年7月14日、ニューヨーク州ノースベルモアで生まれ、2018年3月2日に自動車事故で悲劇的に亡くなりました。しかし、彼の遺産はインターネット文化のおかげで生き続けています。",
+                career: "キャリア",
+                careerDetails: "ビリーはモデルとしてキャリアをスタートし、その後アダルト映画業界に転身し、すぐに人気を博しました。しかし、本当の名声は思いがけない形で彼に訪れました。",
+                internetFame: "インターネットの名声",
+                internetFameDetails: "すべては日本のビデオホスティング「ニコニコ動画」から始まりました。2007年に「ガチムチ」というニックネームのユーザーが、ビリー・ヘリントンの映画のシーンをユーモラスなコメントと音楽で編集したものをアップロードしました。これらのビデオはすぐにバイラルになり、多くのパロディやミームが生まれました。",
+                nickname: "「兄貴」（「お兄さん」を意味する日本語）のニックネームがビリーに定着し、彼はインターネット上のカルト的な存在となりました。彼のカリスマ性、体格、そしてユーモアのセンスが多くのインターネットユーザーにとってアイコンとなりました。",
+                conclusion: "結論",
+                legacy: "ビリー・ヘリントンはインターネット文化に大きな足跡を残しました。彼の人生とキャリアはアダルト映画業界を超えました。彼は力、ユーモア、カリスマ性の象徴となり、彼の遺産は世界中の何百万人ものファンの心に生き続けています。",
+                memorial: "彼の悲劇的な死にもかかわらず、ビリー・ヘリントンはミームのアイコンとして、そして多くの人々のインスピレーションとして永遠に記憶されるでしょう。彼の名前はインターネットの歴史に残り、彼の画像やフレーズは長年にわたってインターネットユーザーを楽しませ続けるでしょう。",
+                interestingFacts: "面白い事実",
+                fitnessFan: "フィットネスファン：",
+                fitnessDetails: "ビリーはその素晴らしい体型で知られていました。彼はトレーニングに多くの時間を費やし、多くのボディビルダーにとってインスピレーションでした。",
+                musicTaste: "音楽の趣味：",
+                musicDetails: "彼が出演するバイラルビデオは、ドナ・サマーの「Hot Stuff」やファットボーイ・スリムの「Right Here, Right Now」といった曲でよく知られています。",
+                culturalPhenomenon: "文化的現象：",
+                culturalDetails: "彼が最も人気を博した日本では、ファンは彼を「ガチ兄貴」と呼び、彼の画像は多くのインターネットミームやフラッシュモブで使用されました。",
+                globalInfluence: "世界的な影響：",
+                globalDetails: "ビリー・ヘリントンと彼をフィーチャーしたミームは、日本だけでなく、YouTubeやRedditなどのプラットフォームのおかげで他の国々でも人気を博しました。",
+                jokesMemes: "ジョークとミーム",
+                jokesMemesIntro: "ビリー・ヘリントンのジョークやミームは、彼のカリスマ的で力強い発言と関連しています。いくつかの例を紹介します：",
+                sunsOut: "太陽が出れば、筋肉も出る！",
+                sunsOutDetails: "このフレーズは、しばしばビリーと彼のボディビルディングへの情熱と関連付けられています。",
+                gachiMuchis: "ガチムチが至る所に！",
+                gachiDetails: "特にミームの文脈で、ファンの挨拶として使われます。",
+                welcomeGym: "ジムへようこそ！",
+                welcomeDetails: "まるでビリーが彼の世界に新しいファンを迎えているかのように、多くのパロディビデオで使用されています。",
+                aboutUs: "私たちについて",
+                aboutProject: "このプロジェクトは、9年生の学生によってビリー・ヘリントンを記念して作成されました。私たちの目標は、彼の遺産を保存し、インターネット文化と世界中の多くの人々に対する彼の影響について伝えることです。私たちのプロジェクトが、ビリー・ヘリントンとミームの歴史における彼の重要性について人々がより多く学ぶ手助けとなることを願っています。"
+            }
+        };
+
+        function showSection(sectionId) {
+            document.querySelectorAll('.content').forEach(function (content) {
+                content.classList.remove('active');
+            });
+            document.getElementById(sectionId + '-content').classList.add('active');
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+
+        function toggleLanguageMenu() {
+            var menu = document.getElementById('language-menu');
+            menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
+        }
+
+        function toggleLanguage(language) {
+            const elementsToTranslate = document.querySelectorAll('[data-translate]');
+            elementsToTranslate.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[language][key]) {
+                    element.textContent = translations[language][key];
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
